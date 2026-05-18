@@ -16,7 +16,7 @@ export default function Settings() {
     getAgency().then(a => {
       setAgency(a);
       setForm({ name: a.name || '', primaryColor: a.primary_color || '#2563EB', secondaryColor: a.secondary_color || '#7C3AED' });
-      if (a.logo_url) setLogoPreview(`http://localhost:5000${a.logo_url}`);
+      if (a.logo_url) setLogoPreview(`https://augmetic-internship.onrender.com${a.logo_url}`);
     }).catch(() => {});
   }, []);
 

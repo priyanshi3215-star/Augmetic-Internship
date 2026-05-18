@@ -34,7 +34,7 @@ export default function Layout() {
       <div style={{ padding: '20px 20px 16px', borderBottom: '1px solid rgba(255,255,255,.07)' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
           {user?.logoUrl ? (
-            <img src={`http://localhost:5000${user.logoUrl}`} alt="logo"
+            <img src={`https://augmetic-internship.onrender.com${user.logoUrl}`} alt="logo"
               style={{ height: 28, width: 28, objectFit: 'contain', borderRadius: 6 }} />
           ) : (
             <div style={{ width: 30, height: 30, background: 'linear-gradient(135deg,#3B82F6,#8B5CF6)', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

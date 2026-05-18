@@ -77,7 +77,7 @@ export default function ClientDetail() {
   
 
   axios.post(
-    'http://localhost:5000/api/ai-reports/analyze',
+    'https://augmetic-internship.onrender.com/api/ai-reports/analyze',
     {
       platform: 'Meta Ads',
       spend: 5000,

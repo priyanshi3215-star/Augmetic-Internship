@@ -146,7 +146,7 @@ Terminal 1 (Backend):
 ```bash
 cd backend
 npm run dev
-# Server running on http://localhost:5000
+# Server running on https://augmetic-internship.onrender.com
 ```
 
 Terminal 2 (Frontend):
