@@ -24,3 +24,9 @@ Thumbs.db
 # Build output
 frontend/build/
 backend/dist/
+
+node_modules
+.env
+dist
+build
+coverage
