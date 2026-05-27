@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: "https://marketing-report-generator-p9wj.onrender.com/api"
+  baseURL: "https://augmetic-internship-1.onrender.com"
 });
 api.interceptors.request.use(cfg => {
   const token = localStorage.getItem('token');
