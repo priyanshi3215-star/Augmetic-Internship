@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: "https://augmetic-internship-1.onrender.com"
+  baseURL: "https://augmetic-internship-1.onrender.com/api/auth/login"
 });
 api.interceptors.request.use(cfg => {
   const token = localStorage.getItem('token');
