@@ -11,7 +11,10 @@ const COLORS = ['#2563EB', '#7C3AED', '#059669', '#D97706', '#DC2626', '#0891B2'
 const PLATFORMS = ['all', 'meta', 'google', 'linkedin', 'twitter', 'tiktok', 'other'];
 
 const fmt = (n, d = 0) => parseFloat(n || 0).toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d });
-const fmtCur = (n) => `$${fmt(n, 2)}`;
+const fmtCur = (n) => `₹${Number(n || 0).toLocaleString('en-IN', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+})}`;
 const fmtPct = (n) => `${fmt(n, 2)}%`;
 
 const Tooltip_ = ({ active, payload, label, prefix = '', suffix = '' }) => {
@@ -377,7 +380,13 @@ setRecommendations(res.data.recommendations);
         </div>
 
         <div style={{ fontSize: 24, fontWeight: 700 }}>
-          ${reportSummary.spend}
+          <div>
+ 
+
+  <div style={{ fontSize: 24, fontWeight: 700 }}>
+    {fmtCur(reportSummary.spend)}
+  </div>
+</div>
         </div>
       </div>
 
@@ -387,7 +396,13 @@ setRecommendations(res.data.recommendations);
         </div>
 
         <div style={{ fontSize: 24, fontWeight: 700 }}>
-          ${reportSummary.revenue}
+         <div>
+ 
+
+  <div style={{ fontSize: 24, fontWeight: 700 }}>
+    {fmtCur(reportSummary.revenue)}
+  </div>
+</div>
         </div>
       </div>
 
@@ -534,7 +549,7 @@ setRecommendations(res.data.recommendations);
                       <LineChart data={trends}>
                         <XAxis dataKey="month" tick={{ fontSize: 11 }} />
                         <YAxis tick={{ fontSize: 11 }} tickFormatter={v => `$${(v / 1000).toFixed(0)}k`} />
-                        <Tooltip content={<Tooltip_ prefix="$" />} />
+                        <Tooltip content={<Tooltip_ prefix="₹" />} />
                         <Line type="monotone" dataKey="spend" stroke="#2563EB" strokeWidth={2.5} dot={{ fill: '#2563EB', r: 3 }} name="Spend" />
                       </LineChart>
                     </ResponsiveContainer>
